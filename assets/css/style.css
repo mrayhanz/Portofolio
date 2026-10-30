@@ -452,61 +452,137 @@ textarea {
   max-width: 480px;
   margin: 0;
 }
+.skills-section-heading {
+  margin-bottom: 42px;
+}
+.skills-section-heading h2 {
+  font-size: clamp(3rem, 5.7vw, 5.3rem);
+  margin-bottom: 12px;
+}
+.skills-section-heading > p:last-child {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0;
+}
 .skills-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 20px;
 }
-.skill-group {
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
+.skill-panel {
+  min-width: 0;
+  border: 1px solid #363636;
+  border-radius: 16px;
+  background: #171717;
+  padding: 26px;
 }
-.skill-group-heading {
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  gap: 14px;
-  min-height: 100px;
+.skill-panel-hard {
+  grid-column: 1;
 }
-.skill-group-index {
-  color: var(--violet);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.75rem;
+.skill-panel-language {
+  grid-column: 2;
 }
-.skill-group h3 {
-  margin: 0 0 8px;
-  font-size: 1.35rem;
+.skill-panel-practice {
+  grid-column: 1 / -1;
 }
-.skill-group-heading p {
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.5;
-  margin: 0;
-}
-.skill-list {
-  display: grid;
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 18px 0 0;
-  border-top: 1px solid var(--line);
-}
-.skill-list li {
+.skill-panel-heading {
   display: flex;
   align-items: center;
-  gap: 9px;
-  color: #cecece;
-  font-size: 0.86rem;
+  gap: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #393939;
 }
-.skill-list i {
-  color: #aaa;
-  font-size: 1.05rem;
+.skill-panel-icon,
+.practice-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: #292929;
+  color: #f1f1f1;
 }
-.skill-list-plain li {
+.skill-panel-icon svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.skill-panel h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+.skill-panel-heading p {
+  margin: 0;
+  color: #b6b6b6;
+  font-size: 0.8rem;
+}
+.skill-chips,
+.practice-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.skill-chips li,
+.practice-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  max-width: 100%;
+  padding: 8px 13px;
+  border: 1px solid #4a4a4a;
+  border-radius: 9px;
+  background: #222;
+  color: #ebebeb;
+  font-size: 0.87rem;
+  line-height: 1.35;
+}
+.skill-chips i {
+  font-size: 1.15rem;
+  color: #d0d0d0;
+}
+.language-card {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid #4a4a4a;
+  border-radius: 10px;
+  background: #222;
 }
-.skill-list-plain span {
-  color: var(--muted);
-  font-size: 0.72rem;
+.language-card strong,
+.language-card span {
+  display: block;
+}
+.language-card span {
+  color: #b6b6b6;
+  font-size: 0.85rem;
+}
+.language-card svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.practice-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 .service-list {
   border-top: 1px solid var(--line);
@@ -1304,16 +1380,39 @@ textarea {
     word-break: break-word;
     overflow-wrap: break-word;
   }
+  .skills-section-heading {
+    margin-bottom: 28px;
+  }
+  .skills-section-heading h2 {
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
   .skills-layout {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 14px;
   }
-  .skill-group-heading {
-    min-height: 0;
-    margin-bottom: 20px;
+  .skill-panel,
+  .skill-panel-hard,
+  .skill-panel-language,
+  .skill-panel-practice {
+    grid-column: auto;
+    padding: 20px;
   }
-  .skill-list {
-    padding-top: 16px;
+  .skill-panel-heading {
+    padding-bottom: 15px;
+  }
+  .skill-chips,
+  .practice-list {
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .skill-chips li,
+  .practice-list li {
+    width: 100%;
+    min-height: 44px;
+    font-size: 0.84rem;
+  }
+  .language-card {
+    margin-top: 18px;
   }
   .service-list article {
     grid-template-columns: 32px 1fr;

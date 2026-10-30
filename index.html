@@ -246,32 +246,61 @@
         </div>
       </section>
 
+      <section class="section about-section" id="tentang">
+        <div class="wrap about-layout">
+          <div>
+            <p class="eyebrow">Sedikit tentang saya</p>
+            <h2>
+              Belajar dengan
+              <br />
+              membangun.
+            </h2>
+          </div>
+          <div>
+            <p class="about-copy">
+              Saya mahasiswa di Politeknik Negeri Malang yang senang memahami cara kerja sebuah
+              sistem dengan membuatnya sendiri. Repositori publik saya mencakup tugas kuliah dan
+              latihan pemrograman; bagian proyek portofolio akan berisi karya pilihan, bukan seluruh
+              daftar tersebut.
+            </p>
+            <div class="about-detail">
+              <span>PENDIDIKAN</span>
+              <p>
+                Politeknik Negeri Malang
+                <br />
+                Teknologi Informasi
+              </p>
+            </div>
+            <div class="about-detail">
+              <span>BERTEMPAT DI</span>
+              <p>Malang, Jawa Timur</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="keahlian">
         <div class="wrap">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Area yang saya tekuni</p>
-              <h2>
-                Apa yang saya
-                <br />
-                kerjakan?
-              </h2>
-            </div>
-            <p>
-              Fokus belajar saya mencakup pengembangan produk perangkat lunak dari antarmuka hingga
-              pengolahan data.
-            </p>
+          <div class="skills-section-heading">
+            <p class="eyebrow">Area yang saya tekuni</p>
+            <h2>Keterampilan</h2>
+            <p>Pengembangan perangkat lunak dan keterampilan visual dari pengalaman PKL.</p>
           </div>
           <div class="skills-layout">
-            <section class="skill-group reveal" aria-labelledby="hard-skills-title">
-              <div class="skill-group-heading">
-                <span class="skill-group-index">01</span>
+            <section
+              class="skill-panel skill-panel-hard reveal"
+              aria-labelledby="hard-skills-title"
+            >
+              <div class="skill-panel-heading">
+                <span class="skill-panel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14" /></svg>
+                </span>
                 <div>
                   <h3 id="hard-skills-title">Hard Skills</h3>
-                  <p>Pengembangan web, mobile, dan pengolahan citra.</p>
+                  <p>Teknikal &amp; pengembangan</p>
                 </div>
               </div>
-              <ul class="skill-list">
+              <ul class="skill-chips">
                 <li>
                   <i class="devicon-laravel-original" aria-hidden="true"></i>
                   Laravel &amp; PHP
@@ -294,33 +323,62 @@
                 </li>
               </ul>
             </section>
-            <section class="skill-group reveal" aria-labelledby="language-title">
-              <div class="skill-group-heading">
-                <span class="skill-group-index">02</span>
+            <section
+              class="skill-panel skill-panel-language reveal"
+              aria-labelledby="language-title"
+            >
+              <div class="skill-panel-heading">
+                <span class="skill-panel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M4 5h8M8 3v2M6 5c0 4 3 7 7 8M10 5c0 3-2 6-6 8M14 19l4-10 4 10M15.5 16h5"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <h3 id="language-title">Bahasa</h3>
-                  <p>Bahasa yang digunakan dalam komunikasi sehari-hari.</p>
+                  <p>Komunikasi</p>
                 </div>
               </div>
-              <ul class="skill-list skill-list-plain">
-                <li>
-                  Bahasa Indonesia
+              <div class="language-card">
+                <div>
+                  <strong>Bahasa Indonesia</strong>
                   <span>Penutur asli</span>
-                </li>
-              </ul>
+                </div>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9 12 2 2 4-4" />
+                  <circle cx="12" cy="12" r="9" />
+                </svg>
+              </div>
             </section>
-            <section class="skill-group reveal" aria-labelledby="work-skills-title">
-              <div class="skill-group-heading">
-                <span class="skill-group-index">03</span>
+            <section
+              class="skill-panel skill-panel-practice reveal"
+              aria-labelledby="work-skills-title"
+            >
+              <div class="skill-panel-heading">
+                <span class="skill-panel-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 7h16v12H4zM8 7V4h8v3M4 12h16M10 12v2h4v-2" />
+                  </svg>
+                </span>
                 <div>
                   <h3 id="work-skills-title">Keterampilan Praktik</h3>
-                  <p>Kemampuan yang diasah melalui proyek dan pengalaman PKL.</p>
+                  <p>Visual &amp; produksi konten</p>
                 </div>
               </div>
-              <ul class="skill-list skill-list-plain">
-                <li>Desain materi pemasaran</li>
-                <li>Produksi video produk</li>
-                <li>Editing foto produk</li>
+              <ul class="practice-list">
+                <li>
+                  <span class="practice-icon" aria-hidden="true">Aa</span>
+                  Desain materi pemasaran
+                </li>
+                <li>
+                  <span class="practice-icon" aria-hidden="true">▶</span>
+                  Produksi video produk
+                </li>
+                <li>
+                  <span class="practice-icon" aria-hidden="true">◫</span>
+                  Editing foto produk
+                </li>
               </ul>
             </section>
           </div>
@@ -592,39 +650,6 @@
                 </div>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section about-section" id="tentang">
-        <div class="wrap about-layout">
-          <div>
-            <p class="eyebrow">Sedikit tentang saya</p>
-            <h2>
-              Belajar dengan
-              <br />
-              membangun.
-            </h2>
-          </div>
-          <div>
-            <p class="about-copy">
-              Saya mahasiswa di Politeknik Negeri Malang yang senang memahami cara kerja sebuah
-              sistem dengan membuatnya sendiri. Repositori publik saya mencakup tugas kuliah dan
-              latihan pemrograman; bagian proyek portofolio akan berisi karya pilihan, bukan seluruh
-              daftar tersebut.
-            </p>
-            <div class="about-detail">
-              <span>PENDIDIKAN</span>
-              <p>
-                Politeknik Negeri Malang
-                <br />
-                Teknologi Informasi
-              </p>
-            </div>
-            <div class="about-detail">
-              <span>BERTEMPAT DI</span>
-              <p>Malang, Jawa Timur</p>
-            </div>
           </div>
         </div>
       </section>

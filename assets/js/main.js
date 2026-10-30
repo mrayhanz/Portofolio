@@ -134,8 +134,10 @@ if (contactForm) {
 
     submitButton.disabled = true;
     submitButton.textContent = "Mengirim...";
-    note.textContent = "Pesan sedang dikirim.";
-    note.removeAttribute("role");
+    if (note) {
+      note.textContent = "Pesan sedang dikirim.";
+      note.removeAttribute("role");
+    }
 
     try {
       const response = await fetch(contactForm.action, {
@@ -146,11 +148,15 @@ if (contactForm) {
       if (!response.ok) throw new Error("Pengiriman gagal");
 
       contactForm.reset();
-      note.textContent = "Pesan berhasil dikirim. Terima kasih!";
-      note.setAttribute("role", "status");
+      if (note) {
+        note.textContent = "Pesan berhasil dikirim. Terima kasih!";
+        note.setAttribute("role", "status");
+      }
     } catch {
-      note.textContent = "Pesan gagal dikirim. Coba lagi beberapa saat.";
-      note.setAttribute("role", "alert");
+      if (note) {
+        note.textContent = "Pesan gagal dikirim. Coba lagi beberapa saat.";
+        note.setAttribute("role", "alert");
+      }
     } finally {
       submitButton.disabled = false;
       submitButton.textContent = "Kirim pesan";

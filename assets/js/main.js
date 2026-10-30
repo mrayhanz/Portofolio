@@ -57,21 +57,26 @@ window.addEventListener(
 );
 updateScrollMotion();
 
-const sections = [...document.querySelectorAll("main section[id]")];
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
-if (sections.length && navLinks.length) {
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach((link) =>
-          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`),
-        );
-      });
-    },
-    { rootMargin: "-25% 0px -65% 0px" },
+if (navLinks.length) {
+  const targetIds = new Set(navLinks.map((link) => link.getAttribute("href").slice(1)));
+  const sections = [...document.querySelectorAll("main section[id]")].filter((section) =>
+    targetIds.has(section.id),
   );
-  sections.forEach((section) => sectionObserver.observe(section));
+  if (sections.length) {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach((link) =>
+            link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`),
+          );
+        });
+      },
+      { rootMargin: "-25% 0px -65% 0px" },
+    );
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
 }
 
 const canAnimate =

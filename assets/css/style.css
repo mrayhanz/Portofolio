@@ -452,6 +452,66 @@ textarea {
   max-width: 480px;
   margin: 0;
 }
+.education-heading {
+  margin-bottom: 36px;
+}
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.education-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 154px;
+  padding: 24px;
+  border: 1px solid #363636;
+  border-radius: 16px;
+  background: #171717;
+}
+.education-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #292929;
+  color: #f1f1f1;
+}
+.education-icon svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.education-period {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.education-card h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+}
+.education-card div > p:last-child {
+  margin: 0;
+  color: #c3c3c3;
+  font-size: 0.88rem;
+}
+.education-score {
+  align-self: start;
+  color: var(--text);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
 .skills-section-heading {
   margin-bottom: 42px;
 }
@@ -1379,6 +1439,19 @@ textarea {
     font-size: clamp(2.2rem, 10vw, 3.4rem);
     word-break: break-word;
     overflow-wrap: break-word;
+  }
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .education-card {
+    grid-template-columns: auto 1fr;
+    min-height: 0;
+    padding: 20px;
+  }
+  .education-score {
+    grid-column: 2;
+    align-self: auto;
   }
   .skills-section-heading {
     margin-bottom: 28px;

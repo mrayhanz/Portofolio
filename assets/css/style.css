@@ -437,23 +437,16 @@ textarea {
   margin-bottom: 12px;
 }
 .section-heading {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 50px;
-  align-items: end;
-  margin-bottom: 55px;
+  margin-bottom: 42px;
 }
 .section-heading h2 {
   font-size: clamp(3rem, 5.7vw, 5.3rem);
+  margin-bottom: 12px;
 }
-.section-heading > p,
-.section-heading > div + div p {
+.section-heading p:not(.eyebrow) {
   color: var(--muted);
-  max-width: 480px;
+  max-width: 600px;
   margin: 0;
-}
-.education-heading {
-  margin-bottom: 36px;
 }
 .education-grid {
   display: grid;
@@ -511,18 +504,6 @@ textarea {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.8rem;
   white-space: nowrap;
-}
-.skills-section-heading {
-  margin-bottom: 42px;
-}
-.skills-section-heading h2 {
-  font-size: clamp(3rem, 5.7vw, 5.3rem);
-  margin-bottom: 12px;
-}
-.skills-section-heading > p:last-child {
-  color: var(--muted);
-  max-width: 600px;
-  margin: 0;
 }
 .skills-layout {
   display: grid;
@@ -947,12 +928,6 @@ textarea {
   color: var(--muted);
   font-size: 0.88rem;
 }
-.contact-heading {
-  margin-bottom: 45px;
-}
-.contact-heading .location {
-  margin-top: 17px !important;
-}
 .location strong {
   color: var(--text);
   font-weight: 500;
@@ -1373,7 +1348,6 @@ textarea {
   .section {
     padding: 64px 0;
   }
-  .section-heading,
   .about-layout,
   .experience-layout,
   .contact-layout {
@@ -1413,12 +1387,6 @@ textarea {
   .education-score {
     grid-column: 2;
     align-self: auto;
-  }
-  .skills-section-heading {
-    margin-bottom: 28px;
-  }
-  .skills-section-heading h2 {
-    font-size: clamp(2.2rem, 10vw, 3.4rem);
   }
   .skills-layout {
     grid-template-columns: 1fr;

@@ -1501,6 +1501,9 @@ textarea {
   }
 }
 @media (max-width: 360px) {
+  .wrap {
+    width: calc(100% - 20px);
+  }
   .dynamic-island {
     padding: 4px;
     gap: 2px;
@@ -1508,6 +1511,7 @@ textarea {
   .dynamic-island a {
     padding: 6px 2px;
     gap: 3px;
+    min-width: 0;
   }
   .dynamic-island .nav-text {
     font-size: 0.54rem;
@@ -1515,6 +1519,10 @@ textarea {
   .dynamic-island .nav-icon {
     width: 12px;
     height: 12px;
+  }
+  .education-card,
+  .skill-panel {
+    padding: 16px 14px;
   }
 }
 @media (hover: none), (pointer: coarse) {
